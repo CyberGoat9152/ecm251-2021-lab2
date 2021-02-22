@@ -7,3 +7,4 @@ repositorio para a diciplina Linguagens I.
 - java
 - Python
 - C
+- Dart
