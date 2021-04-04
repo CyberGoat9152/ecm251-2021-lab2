@@ -1,11 +1,10 @@
-package barros.torres.arthur;
-
 public class Usuarios {
     
     private String name;
     private String cpf;
     private String pass;
     private String email;
+    private boolean integridadeDaConta;
 
     private static int TAMANHO_CPF = 11;
 	
@@ -27,30 +26,28 @@ public class Usuarios {
 			"88888888888",
 			"99999999999"	
 	};
-
+    /*-------------------------------------------Metodos validacao----------------------------------------------------*/
     public Usuarios(String name, String cpf, String pass, String email){
         this.name = name;
         this.cpf = cpf.replace(".", "").replace("-", ""); // retirando os pontos e digito do cpf
         this.pass = pass;
         this.email = email;
-        // Account validation
-        /*--------------------------------colocar metod de verificar erro--------------------------------------*
+        this.integridadeDaConta = validarcpf(this.cpf);
     }
 
     /* Metodos para mudar atributos */
-    public void mudarNome(String name){
-        this.name = name; 
+
+    public String consultarNome(){
+        return this.name; 
     }
-    public void mudarCPF(String cpf){
-        this.cpf = cpf;
+    public String consultarCPF(){
+        return this.cpf;
     }
-    public void mudarEmail(String email){
-        this.email = email;
+    public String consultarEmail(){
+        return this.email;
     }
-    public void mudarPass(String pass){
-        this.pass = pass;
-    }
-    /* Metodos validacao */
+
+    /*-------------------------------------------Metodos validacao----------------------------------------------------*/
     private static boolean validarDigito(int[] multiplicadores, String cpf, int posicaoDigito) {
         /* 
             int[]  -> array de valores de multiplicadores 
@@ -66,7 +63,7 @@ public class Usuarios {
 	public static boolean validarcpf(String cpf){
 		cpf = cpf.replace(".", "");
 		cpf = cpf.replace("-", "");
-		if(cpf.length() != 11)
+		if(cpf.length() != TAMANHO_CPF)
 			return false;
 		
 		//verifica se o CPF esta dentro do array invalidosConhecidos
@@ -81,7 +78,10 @@ public class Usuarios {
 		return false;
 	}
     
-
+    public boolean validaSenha(String senha){
+        return this.pass.equals(senha);
+    }
+   
     public String help(){
         //TODO terminar a descricao da classe
         return "\n\n\n\nClasse para criacao de novo usuario.\n\tconstrutor: Usuarios(nome, cpf, pass, email):\n\t\t-nome (String)\n\t\t-cpf (String)\n\t\t-pass (String)\n\t\t-email (String)\n\n\n\n";
