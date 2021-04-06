@@ -1,6 +1,5 @@
-/.metadata/
-*.class
 /Contas.class
 /Transacoes.class
 /Usuarios.class
 /atividade01.class
+*.class

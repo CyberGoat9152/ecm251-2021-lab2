@@ -1,14 +1,35 @@
-## Getting Started
+# output:
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+QRCode gerado: 74c46d5a099347907adeac2134dfa7ddbaa5f3afa931befa5601559601a5bcd9;Midoria;250.0;8772
 
-## Folder Structure
+--------------------------------------------------------------------------------
 
-The workspace contains two folders by default, where:
+A Transferencia realizada com sucesso:
+	Conta recebedora:74c46d5a099347907adeac2134dfa7ddbaa5f3afa931befa5601559601a5bcd9
+	Valor transferido: R$250.0
+	Seu saldo atual: R$0.0
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+--------------------------------------------------------------------------------
 
-## Dependency Management
+A Transferencia realizada com sucesso:
+	Conta recebedora:74c46d5a099347907adeac2134dfa7ddbaa5f3afa931befa5601559601a5bcd9
+	Valor transferido: R$250.0
+	Seu saldo atual: R$2750.0
 
-The `JAVA DEPENDENCIES` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-pack/blob/master/release-notes/v0.9.0.md#work-with-jar-files-directly).
+--------------------------------------------------------------------------------
+
+Saldo indisponivel para concluir a transferencia:
+	Valor necessecario: R$250.0
+	Seu saldo atual: R$0.0
+
+--------------------------------------------------------------------------------
+
+QRCode gerado: 74c46d5a099347907adeac2134dfa7ddbaa5f3afa931befa5601559601a5bcd9;Luffy;1000.0;2023
+--------------------------------------------------------------------------------
+
+A Transferencia realizada com sucesso:
+	Conta recebedora:74c46d5a099347907adeac2134dfa7ddbaa5f3afa931befa5601559601a5bcd9
+	Valor transferido: R$1000.0
+	Seu saldo atual: R$1750.0
+
+--------------------------------------------------------------------------------
