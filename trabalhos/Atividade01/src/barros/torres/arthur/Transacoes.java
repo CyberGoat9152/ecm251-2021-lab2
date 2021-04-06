@@ -79,7 +79,7 @@ public class Transacoes {
         
             }else{
 
-                return "Saldo indisponivel para concluir a transferencia:"+"\n\tValor necessecario: R$"+dados[2]+"\n\tSeu saldo atual: R$"+pagador.consultarSaldo();
+                return "Saldo indisponivel para concluir a transferencia:"+"\n\tValor necessario: R$"+dados[2]+"\n\tSeu saldo atual: R$"+pagador.consultarSaldo();
             
             }
             
