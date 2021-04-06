@@ -8,7 +8,7 @@ public class Usuarios {
         - email: (String) email do usuario.
         - integridadeDoUsuario: (boolean) caso cpf seja invalido, sera falso imposibilitando a cração de uma conta.
     Metodos da classe:
-        private static boolean validarcpf(String cpf)
+        private static boolean validarcpf(String cpf) : verifica se o cpf digitado é valido.
         public String consultarNome()                 : retorna o nome do usuario instanciado. 
         public String consultarCPF()                  : retorna o cpf do usuario instanciado.
         public String consultarEmail()                : retorna o email do usuario.
@@ -120,7 +120,7 @@ public class Usuarios {
 
 
     public String help(){
-        return "Classe para a criação de uma conta nova de usuario.\nAtributos da classe:\n\t - nome:  (String) nome do titular da conta.\n\t - cpf:   (String) cpf do titular da conta.\n\t - pass:  (String) senha do usuario.\n\t - email: (String) email do usuario.\n\t - integridadeDoUsuario: (boolean) caso cpf seja invalido, sera falso imposibilitando a cração de uma conta.\nMetodos da classe:\n\t private static boolean validarcpf(String cpf)\n\t public String consultarNome()                 : retorna o nome do usuario instanciado. \n\t public String consultarCPF()                  : retorna o cpf do usuario instanciado.\n\t public String consultarEmail()                : retorna o email do usuario.\n\t public boolean consultarIntegridadeDoUsuario(): retorna um boolean se o usuario cadastrado possui um cpf valido.\n";
+        return "Metodos da classe:\n\t- String consultarNome()                 : retorna o nome do usuario instanciado.\n\t- String consultarCPF()                  : retorna o cpf do usuario instanciado.\n\t- String consultarEmail()                : retorna o email do usuario.\n\t- boolean consultarIntegridadeDoUsuario(): retorna um boolean se o usuario cadastrado possui um cpf valido.\n";
     }
 
 

@@ -1,6 +1,15 @@
 import java.util.Random;
 
 public class Transacoes {
+    /* 
+        Classe para gerar qrcodes e realizar pagamentos dos mesmos.
+        Metodos:
+            - String gerarQRCode(Contas recebedor, double valor)                                 : retorna um qrcode (String) contendo o id da conta que recebera o valor, o nome do titular da mesma, 
+                                                                                                   o valor a ser pago, e um codigo gerado aleatoramente para registrar a transferencia, para transferencia
+                                                                                                   de dinheiro.
+            - String pagar(Contas pagador, Contas recebedor, String QRCode, String senha)        : retorna uma mensagem (String) do status da transacao, sendo sucesso ou falha.
+    */
+
     /* -----------------------------------------Construtor------------------------------------------------ */
     
     public Transacoes(){
@@ -101,6 +110,9 @@ public class Transacoes {
 
  
     /*----------------------------------------Metodo de HELP----------------------------------------------- */
+    public String help(){
+        return "Classe para gerar qrcodes e realizar pagamentos dos mesmos.\nMetodos:\n\t  - String gerarQRCode(Contas recebedor, double valor)                                 : retorna um qrcode (String) contendo o id da conta que recebera o valor, o nome do titular da mesma, o valor a ser pago, e um codigo gerado aleatoramente para registrar a transferencia, para transferencia de dinheiro.\n\t- String pagar(Contas pagador, Contas recebedor, String QRCode, String senha)        : retorna uma mensagem (String) do status da transacao, sendo sucesso ou falha.\n";
+    }
 
 
 }

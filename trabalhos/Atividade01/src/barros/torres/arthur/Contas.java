@@ -7,9 +7,10 @@ public class Contas{
             - saldo  : (Double)   Valor disponivel na conta corrente.
             - usuario: (Usuarios) Usando a classe.
         Metodo da classe:
-            - public boolean depositar(String cpf, String senha, double valor)   metodo para depositar dinheiro um boleano indicando se foi bem sucedido 
-            - public boolean sacar(String cpf, String senha, double valor)       metodo para sacar dinheiro retornando um boleano indicando se foi bem sucedido 
-            - private boolean validaUsuario(String cpf, String senha)            metodo para ver se o usuario e valido ou nao, caso nao seja, nao permite a criaçao da conta
+            - public boolean depositar(String cpf, String senha, double valor)   metodo para depositar dinheiro um boleano indicando se foi bem sucedido.
+            - public boolean sacar(String cpf, String senha, double valor)       metodo para sacar dinheiro retornando um boleano indicando se foi bem sucedido.
+            - private boolean validaUsuario(String cpf, String senha)            metodo para ver se o usuario e valido ou nao, caso nao seja, nao permite a criaçao da conta.
+            - private boolean validarConta(String cpf, String id)                metodo para ver se a conta que sera depositado o dinheiro é valida.
     */
 
 
@@ -94,5 +95,8 @@ public class Contas{
 
         return statusCPF && statusID;
     }
-
+    /*----------------------------------------Metodo de HELP----------------------------------------------- */
+    public String help(){
+        return " Metodo da classe:\n\t- boolean depositar(String cpf, String senha, double valor)   metodo para depositar dinheiro um boleano indicando se foi bem sucedido.\n\t-boolean sacar(String cpf, String senha, double valor)       metodo para sacar dinheiro retornando um boleano indicando se foi bem sucedido.";
+    }
 }
