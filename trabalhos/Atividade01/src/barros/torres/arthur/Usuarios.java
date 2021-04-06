@@ -1,10 +1,27 @@
 public class Usuarios {
+    /*
+                                                      Classe para a criação de uma conta nova de usuario.
+    Atributos da classe:
+        - nome:  (String) nome do titular da conta.
+        - cpf:   (String) cpf do titular da conta.
+        - pass:  (String) senha do usuario.
+        - email: (String) email do usuario.
+        - integridadeDoUsuario: (boolean) caso cpf seja invalido, sera falso imposibilitando a cração de uma conta.
+    Metodos da classe:
+        private static boolean validarcpf(String cpf)
+        public String consultarNome()                 : retorna o nome do usuario instanciado. 
+        public String consultarCPF()                  : retorna o cpf do usuario instanciado.
+        public String consultarEmail()                : retorna o email do usuario.
+        public boolean consultarIntegridadeDoUsuario(): retorna um boolean se o usuario cadastrado possui um cpf valido.
+
     
-    private String name;
+    */
+    
+    private String nome;
     private String cpf;
     private String pass;
     private String email;
-    private boolean integridadeDaConta;
+    private boolean integridadeDoUsuario;
 
     private static int TAMANHO_CPF = 11;
 	
@@ -26,19 +43,34 @@ public class Usuarios {
 			"88888888888",
 			"99999999999"	
 	};
+
     /*-------------------------------------------Metodos validacao----------------------------------------------------*/
-    public Usuarios(String name, String cpf, String pass, String email){
-        this.name = name;
+    public Usuarios(String nome, String cpf, String pass, String email){
+        this.nome = nome;
         this.cpf = cpf.replace(".", "").replace("-", ""); // retirando os pontos e digito do cpf
         this.pass = pass;
         this.email = email;
-        this.integridadeDaConta = validarcpf(this.cpf);
+        this.integridadeDoUsuario = validarcpf(this.cpf);
+    }
+     /*-----------------------------------------Metodos para mudar atributos-------------------------------------------*/
+
+    public void mudarNome(String nome){
+        this.nome = nome; 
+    }
+    public void mudarCPF(String cpf){
+        this.cpf = cpf;
+    }
+    public void mudarEmail(String email){
+        this.email = email;
+    }
+    public void mudarPass(String pass){
+        this.pass = pass;
     }
 
-    /* Metodos para mudar atributos */
+    /*-----------------------------------------Metodos para consultar atributos-------------------------------------------*/
 
     public String consultarNome(){
-        return this.name; 
+        return this.nome; 
     }
     public String consultarCPF(){
         return this.cpf;
@@ -46,8 +78,12 @@ public class Usuarios {
     public String consultarEmail(){
         return this.email;
     }
+    public boolean consultarIntegridadeDoUsuario(){
+        return this.integridadeDoUsuario;
+    }
 
     /*-------------------------------------------Metodos validacao----------------------------------------------------*/
+    //validação de cpf desenvolvida com https://github.com/Murilo-ZC
     private static boolean validarDigito(int[] multiplicadores, String cpf, int posicaoDigito) {
         /* 
             int[]  -> array de valores de multiplicadores 
@@ -81,10 +117,13 @@ public class Usuarios {
     public boolean validaSenha(String senha){
         return this.pass.equals(senha);
     }
-   
+
+
     public String help(){
-        //TODO terminar a descricao da classe
-        return "\n\n\n\nClasse para criacao de novo usuario.\n\tconstrutor: Usuarios(nome, cpf, pass, email):\n\t\t-nome (String)\n\t\t-cpf (String)\n\t\t-pass (String)\n\t\t-email (String)\n\n\n\n";
+        return "Classe para a criação de uma conta nova de usuario.\nAtributos da classe:\n\t - nome:  (String) nome do titular da conta.\n\t - cpf:   (String) cpf do titular da conta.\n\t - pass:  (String) senha do usuario.\n\t - email: (String) email do usuario.\n\t - integridadeDoUsuario: (boolean) caso cpf seja invalido, sera falso imposibilitando a cração de uma conta.\nMetodos da classe:\n\t private static boolean validarcpf(String cpf)\n\t public String consultarNome()                 : retorna o nome do usuario instanciado. \n\t public String consultarCPF()                  : retorna o cpf do usuario instanciado.\n\t public String consultarEmail()                : retorna o email do usuario.\n\t public boolean consultarIntegridadeDoUsuario(): retorna um boolean se o usuario cadastrado possui um cpf valido.\n";
     }
+
+
+
 
 }
