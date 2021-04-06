@@ -5,9 +5,9 @@ public class atividade01 {
         String QRCode;
 
 
-        Usuarios u1 = new Usuarios("Midoria","443.055.508-73","hair","mido@oneforall.com");   
-        Usuarios u2 = new Usuarios("Luffy","443.055.508-73","gomugomu","goingmerry@outlook.com");   
-        Usuarios u3 = new Usuarios("Kaguia","443.055.508-73","love","loveiswar@gmail.com");   
+        Usuarios u1 = new Usuarios("Midoria",SEU_CPF,"hair","mido@oneforall.com");   
+        Usuarios u2 = new Usuarios("Luffy",SEU_CPF,"gomugomu","goingmerry@outlook.com");   
+        Usuarios u3 = new Usuarios("Kaguia",SEU_CPF,"love","loveiswar@gmail.com");   
         
         Contas c1 = new Contas(u1, "hair", 1000.00);
         Contas c2 = new Contas(u2, "gomugomu", 250.00);
